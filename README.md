@@ -1,14 +1,3 @@
-AppNode:
-    Type: AWS::EC2::Instance
-    Properties:
-      InstanceType: t2.micro
-      ImageId: ami-66506c1c
-      KeyName: awscli_CF_practise
-      SecurityGroups:
-        - !Ref AppNodeSG
-
-
-
 This is a demonstration of how to install EC2, Docker, Kubernetes, and Minikube on your AWS platform, using cloudformation, YAML file. For this repo to work you would need to first create an AWS account. In the management console, go to the IAM page, where you will need to create a user. Grant the user admin privilege full access. At the end of this process you will  be granted an access key ID and a secret Access key. Next, go to EC2, click launch instance (go to community AMI on your left pannel), "note the ami-ID you want to use, and for the region", this is important, cos AMI-ID varies by region, in this case our choice is for Ubuntu 16 for us-east-1.
 
  To deploy CloudFormation (CF) via terminal you will need to enable awscli. I prefer using the bundle because it works across most platforms.
@@ -16,7 +5,7 @@ This is a demonstration of how to install EC2, Docker, Kubernetes, and Minikube 
 
 Download this repo by running 
 
-$ git clone https://github.com/CF_AWS
+$ git clone https://github.com/CF_EC2_AWS_DOCKER.git
 
 $ curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 $ unzip awscli-bundle.zip
