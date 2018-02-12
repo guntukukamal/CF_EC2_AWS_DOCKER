@@ -59,6 +59,25 @@ you can delete the stack by enetering the following
 
 $ aws cloudformation delete-stack --stack-name  practise-demo --profile osepractise
 
+To install docker on EC2 use:
+$ aws cloudformation create-stack --stack-name practise-demo --template-body file://$PWD/ubuntucf_docker.yaml --profile osepractise
 
+you can confirm the installation with:
+$ docker ps
+this shows docker has not been installed
+$ which docker 
 
+while to completely install kubernetes to work in hand with docker 
+run the line 
 
+$ aws cloudformation create-stack --stack-name practise-demo --template-body file://$PWD/cf_stack.yaml --profile osepractise
+
+this will install, git, virtualbox, on the ubuntu image, which enables you to easily install minikube, and kubernetes on the ec2 instance
+you can confirm this installation with: 
+
+$ docker ps
+in my case 
+CONTAINER ID        IMAGE                                    COMMAND             CREATED              STATUS              PORTS               NAMES
+fbbf192f9530        kube-build:build-2dcc171db0-5-v1.9.3-2   "make cross"        About a minute ago   Up About a minute                       kube-build-2dcc171db0-5-v1.9.3-2
+
+with that you can test and deploy any application of you chosing.
