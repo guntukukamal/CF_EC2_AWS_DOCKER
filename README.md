@@ -89,4 +89,4 @@ fbbf192f9530        kube-build:build-2dcc171db0-5-v1.9.3-2   "make cross"       
 
 
 
-with that you can test and deploy any application of you chosing.
+with that you can test and deploy any application of you chosing, on kubernetes, or on minikube or even on docker directly.
