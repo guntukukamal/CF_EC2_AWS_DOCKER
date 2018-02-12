@@ -1,0 +1,39 @@
+Resources:
+  AppNodeSG:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: >-
+        Enable HTTP access via port 80 locked down to the load balancer + SSH
+        access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
+  AppNode:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-66506c1c
+      KeyName: awscli_CF_practise
+      SecurityGroups:
+        - !Ref AppNodeSG
+      UserData: !Base64 |
+        #!/bin/bash
+        sudo true
+        sudo apt-get update
+        sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+        sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+        sudo apt-get update
+        sudo apt-get install docker-ce -y
+
+        sudo apt-get -y install docker-engine
+        usermod -aG docker ubuntu
+        

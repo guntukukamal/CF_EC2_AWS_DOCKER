@@ -1,4 +1,3 @@
-# CF_EC2_AWS_DOCKER
 AppNode:
     Type: AWS::EC2::Instance
     Properties:
