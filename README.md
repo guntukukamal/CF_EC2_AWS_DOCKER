@@ -72,8 +72,9 @@ run the line
 
 $ aws cloudformation create-stack --stack-name practise-demo --template-body file://$PWD/cf_stack.yaml --profile osepractise
 
-this will install, git, virtualbox, on the ubuntu image, which enables you to easily install minikube, and kubernetes on the ec2 instance
-you can confirm this installation with: 
+this will install, git, virtualbox, on the ubuntu image, which enables you to easily install minikube, and kubernetes on the ec2 instance, 
+It will later deploy a stateless application on the kubernetes cluster using php redis-master and redis slave for backend, and 
+a guestbook for frontend. you can confirm this installation with: 
 
 $ docker ps
 
@@ -86,7 +87,9 @@ NAMES
 
 fbbf192f9530        kube-build:build-2dcc171db0-5-v1.9.3-2   "make cross"        About a minute ago   Up About a minute                       kube-build-2dcc171db0-5-v1.9.3-2
 
+The issue with this deployment is 2 folds: the instance is not engineered propagate kubernetes clusters, and even if one deploy an auto-scaling script to this deployment, it wont function as ECS, furthermore, the size of the instance, as well as its default cpu cannot properlly handle the deployments. hence there is need of using the right compute platform to sclae and deploy kubernetes. 
+please check out github.com/osaosemwen/cloudapplication. this is carried out first on Google Cloud platform, the next would be on AWS, then Azure...
 
 
-
-with that you can test and deploy any application of you chosing, on kubernetes, or on minikube or even on docker directly.
+with that you can test your application been deploy to cloud. Please never use this in production... this is only to show you one of the simple things you can do with cloudformation. 
+To deploy some complex structure with AWS cloudformation please check github.com/osaosemwen/.... tobe continued.
