@@ -113,3 +113,8 @@ After confirming all the checks for the instance is complete, use the DNS for th
 e.g. http://ec2-35-160-222-229.us-west-2.compute.amazonaws.com:8080/login?from=%2F
 
 and setup the jenkins.
+this would require SSH, and may involve getting to the bash of the jenkins
+
+using 
+
+$ sudo docker exec -it "container id for docker" bash
