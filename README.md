@@ -93,3 +93,16 @@ please check out github.com/osaosemwen/cloudapplication. this is carried out fir
 
 with that you can test your application been deploy to cloud. Please never use this in production... this is only to show you one of the simple things you can do with cloudformation. 
 To deploy some complex structure with AWS cloudformation please check github.com/osaosemwen/.... tobe continued.
+
+
+# Deploying Jenkins on EC2 with Dockers
+
+I usually find an easy way to make my future works easier, and since I like using small things to make good and big things.. on the cloud. So This is why I am adding this commit.
+
+This  is principally to deploy Jenkins on the cloud using cloud formation. After following the Information on the READMe, to set up your computer for AWS CLI, simply ensure you have with you, your access key, and secret access key which you derive from IAM. I created this deployment on us-west-2 region @Oregon.
+
+Then create the working profile to communicate with AWS using CLI on your PC as mentioned above.
+
+$ aws cloudformation create-stack --stack-name practise-demo --template-body file://$PWD/CF.yaml --profile osetutorial
+
+note on the CF.yaml, the instance id is mapped according to the region which is us-west-2, as well as I added ports 50000, and 8080, this is needed for Jenkins, the CIDRIP block is imp for security I left it 0.0.0.0 this is because the deployment is 
