@@ -106,3 +106,11 @@ Then create the working profile to communicate with AWS using CLI on your PC as 
 $ aws cloudformation create-stack --stack-name practise-demo --template-body file://$PWD/CF.yaml --profile osetutorial
 
 note on the CF.yaml, the instance id is mapped according to the region which is us-west-2, as well as I added ports 50000, and 8080, this is needed for Jenkins, the CIDRIP block is imp for security I left it 0.0.0.0 this is because the deployment is 
+but actually its meant to be a range of IP. 
+
+
+After confirming all the checks for the instance is complete, use the DNS for the instance combined with the port 8080
+
+e.g. http://ec2-35-160-222-229.us-west-2.compute.amazonaws.com:8080/login?from=%2F
+
+and setup the jenkins.
