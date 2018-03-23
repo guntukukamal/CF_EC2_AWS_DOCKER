@@ -99,7 +99,7 @@ To deploy some complex structure with AWS cloudformation please check github.com
 
 I usually find an easy way to make my future works easier, and since I like using small things to make good and big things.. on the cloud. So This is why I am adding this commit.
 
-This  is principally to deploy Jenkins on the cloud using cloud formation. After following the Information on the READMe, to set up your computer for AWS CLI, simply ensure you have with you, your access key, and secret access key which you derive from IAM. I created this deployment on us-west-2 region @Oregon.
+This  is principally to deploy Jenkins on the cloud using cloud formation. After following the Information on the READMe, to set up your computer for AWS CLI, simply ensure you have with you, your access key, and secret access key which you derive from IAM. Then ensure, the private key to be used is created "awscli_CF_practise.pem" is created and downloaded in the same $PWD. Then I created this deployment on us-west-2 region @Oregon.
 
 Then create the working profile to communicate with AWS using CLI on your PC as mentioned above.
 
