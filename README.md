@@ -124,3 +124,5 @@ this would require SSH to the EC2, and then may involve getting to the bash of t
 using to get the first default login password.
 
 ``` $ sudo docker exec -it "container id for docker" bash ```
+
+![dockerimage1](https://user-images.githubusercontent.com/17884787/37859395-6fae4e1e-2ee9-11e8-8303-4a50b70ecdcc.png)
