@@ -5,7 +5,7 @@ This is a demonstration of how to install EC2, Docker, Kubernetes, and Minikube 
 
 Download this repo by running 
 
-$ git clone https://github.com/CF_EC2_AWS_DOCKER.git
+``` $ git clone https://github.com/CF_EC2_AWS_DOCKER.git ```
 
 $ curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 $ unzip awscli-bundle.zip
