@@ -82,10 +82,10 @@ $ docker ps
 in my case 
 
 
-```CONTAINER ID        IMAGE                                    COMMAND             CREATED              STATUS              PORTS               
-NAMES
+``` CONTAINER ID        IMAGE   COMMAND             CREATED              STATUS              PORTS           NAMES
 
 fbbf192f9530        kube-build:build-2dcc171db0-5-v1.9.3-2   "make cross"        About a minute ago   Up About a minute                       kube-build-2dcc171db0-5-v1.9.3-2
+
 ```
 
 The issue with this deployment is 2 folds: the instance is not engineered propagate kubernetes clusters, and even if one deploy an auto-scaling script to this deployment, it wont function as ECS, furthermore, the size of the instance, as well as its default cpu cannot properlly handle the deployments. hence there is need of using the right compute platform to sclae and deploy kubernetes. 
