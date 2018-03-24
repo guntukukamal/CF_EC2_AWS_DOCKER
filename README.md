@@ -16,13 +16,13 @@ This is assuming python minimum version 2.7 is installed on your system
 after installing awscli you can test it by entering the access ID and key you got from the IAM, to setup your terminal give the profile a name for example "osetutorial" as shown below:
 
 ``` $ aws configure --profile osetutorial ```
--[x] AWS Access Key ID [None]: A............
--[x] AWS Secret Access Key [None]: A............................
+- [x] AWS Access Key ID [None]: A............
+- [x] AWS Secret Access Key [None]: A............................
 
 chose the region thats you want to use, for example
 
--[x] Default region name [None]: us-east-1
--[x] Default output format [None]: 
+- [x] Default region name [None]: us-east-1
+- [x] Default output format [None]: 
 
 the terminal is now setup to run your stack
 
@@ -127,6 +127,6 @@ using to get the first default login password.
 
 ![dockerimage1](https://user-images.githubusercontent.com/17884787/37859395-6fae4e1e-2ee9-11e8-8303-4a50b70ecdcc.png)
 
-<p align="center">
+<p align="left">
   <img src="![dockerimage1](https://user-images.githubusercontent.com/17884787/37859395-6fae4e1e-2ee9-11e8-8303-4a50b70ecdcc.png)" width="150" height="150"/>
 </p>
